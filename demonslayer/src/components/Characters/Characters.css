@@ -1,0 +1,132 @@
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section.character::before {
+    content: '';
+    width: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.techniques {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    font-size: 3rem;
+    width: 30%;
+    color: #fff;
+    transform: translate(100%, 100%);
+}
+
+.character img {
+    position: relative;
+    z-index: 10;
+    height: 90vh;
+    width: auto;
+    transform: translateY(-100%);
+}
+
+.huge-text {
+    font-size: 25rem;
+    width: 100%;
+    text-align: center;
+    color: #B31312;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    transform: translateY(100%);
+    font-weight: 700;
+}
+
+.fullname {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    text-align: right;
+    transform: translateY(-200%);
+    color: #B31312;
+}
+
+.fullname span {
+    display: block;
+    font-size: 70%;
+    color: #fff;
+}
+
+.quote {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    font-size: 3rem;
+    width: 30%;
+    text-align: right;
+    transform: translateY(200%);
+    color: #fff;
+}
+
+.quote::before,
+.quote::after {
+    content: '';
+    color: #fff;
+}
+
+@media (max-width:960px) {
+    .huge-text {
+        font-size: 16rem;
+    }
+
+    .character img {
+        height: 70vh;
+    }
+
+    .techniques {
+        left: 1rem;
+        font-size: 2.5rem;
+        width: auto;
+    }
+
+    .quote {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:477px) {
+    .huge-text {
+        font-size: 7rem;
+    }
+
+    .character img {
+        height: 55vh;
+    }
+
+    .techniques {
+        left: -2.5rem;
+        font-size: 1.5rem;
+        width: auto;
+        bottom: 2rem;
+    }
+
+    .quote {
+        font-size: 1.5rem;
+        width: auto;
+        right: 1.5rem;
+    }
+
+    .fullname {
+        top: 3rem;
+        right: 1.5rem;
+        font-size: 1.8rem;
+        text-align: right;
+    }
+
+}
